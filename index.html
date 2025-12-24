@@ -1,1 +1,387 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রাণীহাটি সরকারি প্রাথমিক বিদ্যালয় | Ranihati GPS</title>
+    
+    <!-- Frameworks & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .school-green { background-color: #006a4e; }
+        .school-green-dark { background-color: #004d39; }
+        .mango-yellow { background-color: #ffbf00; }
+        .text-mango { color: #ffbf00; }
+        
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM10 50c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm33-31c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-7-15c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm54 56c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-56 13c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm56 13c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .teacher-card img {
+            transition: transform 0.5s ease;
+        }
+        .teacher-card:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-[100] bg-white/90 backdrop-blur-md shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 school-green rounded-xl flex items-center justify-center text-white text-2xl shadow-lg">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-emerald-900 leading-tight">রাণীহাটি সপ্রাবি</h1>
+                        <p class="text-xs text-emerald-600 font-bold tracking-tighter uppercase">শিবগঞ্জ, চাঁপাইনবাবগঞ্জ</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 font-semibold items-center">
+                    <a href="#" class="text-emerald-900 hover:text-orange-500 transition">প্রচ্ছদ</a>
+                    <a href="#about" class="text-emerald-900 hover:text-orange-500 transition">স্কুল তথ্য</a>
+                    <a href="#teachers" class="text-emerald-900 hover:text-orange-500 transition">শিক্ষকমণ্ডলী</a>
+                    <a href="#gallery" class="text-emerald-900 hover:text-orange-500 transition">গ্যালারি</a>
+                    <a href="#" class="mango-yellow px-6 py-2.5 rounded-full text-emerald-950 hover:shadow-lg transition transform hover:-translate-y-1">ভর্তি ফরম</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-40 school-green text-white overflow-hidden">
+        <div class="absolute inset-0 hero-pattern"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span class="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-bold mb-6 inline-block backdrop-blur-md border border-white/20 italic">EMIS কোড: 116731</span>
+                    <h2 class="text-5xl lg:text-7xl font-black mb-8 leading-[1.1]">
+                        আগামীর স্মার্ট <br><span class="text-mango">নাগরিক গড়ার</span> সুতিকাগার
+                    </h2>
+                    <p class="text-xl text-emerald-50 mb-10 opacity-90 font-light max-w-xl">
+                        রাণীহাটি সরকারি প্রাথমিক বিদ্যালয়ে আমরা প্রতিটি শিশুকে সৃজনশীলতা ও নৈতিক শিক্ষার মাধ্যমে ভবিষ্যতের জন্য তৈরি করি।
+                    </p>
+                    <div class="flex flex-wrap gap-5">
+                        <a href="#speech" class="bg-white text-emerald-900 px-8 py-4 rounded-2xl font-bold hover:bg-orange-400 hover:text-white transition shadow-2xl flex items-center gap-2">
+                            বিস্তারিত দেখুন <i class="fas fa-arrow-down text-sm"></i>
+                        </a>
+                        <a href="#notice" class="bg-emerald-800/50 border border-white/30 px-8 py-4 rounded-2xl font-bold hover:bg-white/10 transition backdrop-blur-md">
+                            ডিজিটাল নোটিশ
+                        </a>
+                    </div>
+                </div>
+                <div class="relative" data-aos="zoom-in-left" data-aos-duration="1200">
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-[12px] border-white/10">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students" class="w-full h-[450px] object-cover">
+                    </div>
+                    <!-- Stats Floating Card -->
+                    <div class="absolute -bottom-10 -right-6 glass-card p-8 rounded-3xl shadow-2xl z-20 border border-white/30">
+                        <div class="text-center">
+                            <p class="text-4xl font-black text-mango mb-1">১০০%</p>
+                            <p class="text-xs uppercase font-bold tracking-widest text-emerald-100">উপবৃত্তি সুবিধা</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Stats Row -->
+    <div class="bg-white py-10 shadow-sm relative z-30 -mt-10 mx-4 max-w-5xl lg:mx-auto rounded-3xl border border-gray-100">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
+            <div><h3 class="text-3xl font-black text-emerald-900">৫৫০+</h3><p class="text-gray-500 font-bold">শিক্ষার্থী</p></div>
+            <div><h3 class="text-3xl font-black text-emerald-900">১১</h3><p class="text-gray-500 font-bold">শিক্ষক</p></div>
+            <div><h3 class="text-3xl font-black text-emerald-900">১০</h3><p class="text-gray-500 font-bold">শ্রেণিকক্ষ</p></div>
+            <div><h3 class="text-3xl font-black text-emerald-900">০৫</h3><p class="text-gray-500 font-bold">মাল্টিমিডিয়া</p></div>
+        </div>
+    </div>
+
+    <!-- Notice & Features -->
+    <section class="py-24" id="notice">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1" data-aos="fade-up">
+                    <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-slate-100 h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full -mr-16 -mt-16"></div>
+                        <h3 class="text-2xl font-bold text-emerald-900 mb-8 flex items-center gap-3">
+                            <i class="fas fa-bullhorn text-orange-500"></i> নোটিশ বোর্ড
+                        </h3>
+                        <div class="space-y-6 relative z-10" id="noticeList">
+                            <div class="group cursor-pointer">
+                                <p class="text-xs font-bold text-orange-600 mb-1">২৪ ডিসেম্বর, ২০২৪</p>
+                                <h4 class="font-bold text-emerald-950 group-hover:text-emerald-600 transition">বার্ষিক পরীক্ষার ফলাফল ও মার্কশীট বিতরণ</h4>
+                            </div>
+                            <div class="h-[1px] bg-slate-100"></div>
+                            <div class="group cursor-pointer">
+                                <p class="text-xs font-bold text-orange-600 mb-1">২০ ডিসেম্বর, ২০২৪</p>
+                                <h4 class="font-bold text-emerald-950 group-hover:text-emerald-600 transition">নতুন বছরের বই উৎসব ২০২৫ সংক্রান্ত বিজ্ঞপ্তি</h4>
+                            </div>
+                            <div class="h-[1px] bg-slate-100"></div>
+                            <div class="group cursor-pointer">
+                                <p class="text-xs font-bold text-orange-600 mb-1">১৫ ডিসেম্বর, ২০২৪</p>
+                                <h4 class="font-bold text-emerald-950 group-hover:text-emerald-600 transition">শীতকালীন ছুটির তালিকা ও স্কুল খোলার তারিখ</h4>
+                            </div>
+                        </div>
+                        <button class="mt-10 w-full py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-orange-500 transition shadow-lg">সবগুলো দেখুন</button>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-[2rem] bg-emerald-900 text-white shadow-xl">
+    <i class="fas fa-file-pdf text-4xl text-mango mb-6"></i>
+    <h4 class="text-xl font-bold mb-6">পরীক্ষার ফলাফল</h4>
+
+    <div class="space-y-4" id="resultList">
+        <p class="text-sm opacity-70">লোড হচ্ছে...</p>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Headmaster's Speech -->
+    <section class="py-24 bg-slate-100" id="speech">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden border border-white">
+                <div class="grid lg:grid-cols-3 gap-16 items-center relative z-10">
+                    <div class="lg:col-span-1 text-center" data-aos="zoom-in">
+                        <div class="relative inline-block">
+                            <div class="absolute inset-0 bg-mango-yellow rounded-full rotate-6 scale-105"></div>
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full relative z-10 border-8 border-white shadow-xl">
+                        </div>
+                        <h4 class="text-2xl font-black text-emerald-900 mt-8">জনাব মোঃ আব্দুর রহমান</h4>
+                        <p class="text-orange-600 font-bold uppercase tracking-widest text-sm">প্রধান শিক্ষক</p>
+                    </div>
+                    <div class="lg:col-span-2" data-aos="fade-left">
+                        <i class="fas fa-quote-left text-5xl text-emerald-100 mb-6"></i>
+                        <h3 class="text-3xl font-black text-emerald-950 mb-6 leading-tight">Hi there, <br>website</h3>
+                        <p class="text-xl text-slate-600 leading-relaxed mb-8 italic">
+                            "শিবগঞ্জের ঐতিহ্যবাহী রাণীহাটি এলাকায় শিক্ষার আলো ছড়িয়ে দিতে আমাদের বিদ্যালয়টি ১৯৭৩ সাল থেকে নিরলস কাজ করে যাচ্ছে। আমরা শুধু পাঠ্যবই নয়, বরং মানবিক মূল্যবোধ সম্পন্ন মানুষ তৈরিতে বিশ্বাসী। আমাদের ডিজিটাল ক্লাসরুম ও দক্ষ শিক্ষকমণ্ডলী আপনার সন্তানের ভবিষ্যৎ নিশ্চিতে বদ্ধপরিকর।"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-[2px] bg-mango-yellow"></div>
+                            <span class="font-bold text-emerald-900 italic">শুভেচ্ছান্তে, প্রধান শিক্ষক</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Slider -->
+    <section class="py-24 bg-emerald-950 text-white overflow-hidden" id="teachers">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-black mb-4">আমাদের নিবেদিতপ্রাণ শিক্ষকমণ্ডলী</h2>
+                <div class="w-24 h-1.5 bg-mango-yellow mx-auto rounded-full"></div>
+            </div>
+
+            <div class="swiper teacherSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Teacher slides (showing 10 placeholders) -->
+                    <div class="swiper-slide p-4">
+                        <div class="teacher-card bg-white/10 p-8 rounded-[2rem] text-center border border-white/10 backdrop-blur-sm">
+                            <img src="https://i.pravatar.cc/150?u=1" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-mango-yellow object-cover">
+                            <h4 class="font-bold text-xl mb-1">মোঃ হাসানুজ্জামান</h4>
+                            <p class="text-emerald-300 text-sm">সহকারী শিক্ষক</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide p-4"><div class="teacher-card bg-white/10 p-8 rounded-[2rem] text-center border border-white/10 backdrop-blur-sm"><img src="https://i.pravatar.cc/150?u=2" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-emerald-400 object-cover"><h4 class="font-bold text-xl mb-1">মোসাঃ রুবিনা খাতুন</h4><p class="text-emerald-300 text-sm">সহকারী শিক্ষক</p></div></div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide p-4"><div class="teacher-card bg-white/10 p-8 rounded-[2rem] text-center border border-white/10 backdrop-blur-sm"><img src="https://i.pravatar.cc/150?u=3" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-mango-yellow object-cover"><h4 class="font-bold text-xl mb-1">আব্দুল মান্নান</h4><p class="text-emerald-300 text-sm">সহকারী শিক্ষক</p></div></div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide p-4"><div class="teacher-card bg-white/10 p-8 rounded-[2rem] text-center border border-white/10 backdrop-blur-sm"><img src="https://i.pravatar.cc/150?u=4" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-emerald-400 object-cover"><h4 class="font-bold text-xl mb-1">সোহেল রানা</h4><p class="text-emerald-300 text-sm">সহকারী শিক্ষক</p></div></div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide p-4"><div class="teacher-card bg-white/10 p-8 rounded-[2rem] text-center border border-white/10 backdrop-blur-sm"><img src="https://i.pravatar.cc/150?u=5" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-mango-yellow object-cover"><h4 class="font-bold text-xl mb-1">ফারজানা ইয়াসমিন</h4><p class="text-emerald-300 text-sm">সহকারী শিক্ষক</p></div></div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide p-4"><div class="teacher-card bg-white/10 p-8 rounded-[2rem] text-center border border-white/10 backdrop-blur-sm"><img src="https://i.pravatar.cc/150?u=6" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-emerald-400 object-cover"><h4 class="font-bold text-xl mb-1">কামরুল ইসলাম</h4><p class="text-emerald-300 text-sm">সহকারী শিক্ষক</p></div></div>
+                    <!-- Slide 7 -->
+                    <div class="swiper-slide p-4"><div class="teacher-card bg-white/10 p-8 rounded-[2rem] text-center border border-white/10 backdrop-blur-sm"><img src="https://i.pravatar.cc/150?u=7" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-mango-yellow object-cover"><h4 class="font-bold text-xl mb-1">মোসাঃ নাহার</h4><p class="text-emerald-300 text-sm">সহকারী শিক্ষক</p></div></div>
+                </div>
+                <!-- Swiper Navigation -->
+                <div class="flex justify-center gap-4 mt-12">
+                    <div class="teacher-prev cursor-pointer w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-mango-yellow hover:text-emerald-950 transition"><i class="fas fa-chevron-left"></i></div>
+                    <div class="teacher-next cursor-pointer w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-mango-yellow hover:text-emerald-950 transition"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-24 bg-white" id="gallery">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-emerald-950 mb-4">ফটোগ্যালারি</h2>
+                <div class="w-24 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-[2rem] shadow-xl group" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/90 via-transparent flex items-end p-8 opacity-0 group-hover:opacity-100 transition duration-500">
+                        <p class="text-white text-xl font-bold">শ্রেণিকক্ষে পাঠদান কার্যক্রম</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-[2rem] shadow-lg group h-64" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="relative overflow-hidden rounded-[2rem] shadow-lg group h-64" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="relative overflow-hidden rounded-[2rem] shadow-lg group h-64 md:col-span-2" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-16 mb-16">
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-10 h-10 school-green rounded-lg flex items-center justify-center text-white text-xl">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white">রাণীহাটি সপ্রাবি</h2>
+                </div>
+                <p class="leading-relaxed mb-8 opacity-70 italic">"মানসম্মত প্রাথমিক শিক্ষা, আমাদের অঙ্গীকার।"</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center hover:bg-red-600 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-8 uppercase tracking-widest text-sm">প্রয়োজনীয় লিংক</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="#" class="hover:text-mango-yellow transition flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> প্রাথমিক শিক্ষা অধিদপ্তর</a></li>
+                    <li><a href="#" class="hover:text-mango-yellow transition flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> শিবগঞ্জ উপজেলা শিক্ষা অফিস</a></li>
+                    <li><a href="#" class="hover:text-mango-yellow transition flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> ফলাফল অনুসন্ধান</a></li>
+                    <li><a href="#" class="hover:text-mango-yellow transition flex items-center gap-2"><i class="fas fa-chevron-right text-[10px]"></i> আমাদের ইতিহাস</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-8 uppercase tracking-widest text-sm">যোগাযোগ</h4>
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4">
+                        <i class="fas fa-map-marker-alt mt-1 text-mango-yellow"></i>
+                        <span>রাণীহাটি, শিবগঞ্জ, <br>চাঁপাইনবাবগঞ্জ, রাজশাহী।</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-phone-alt text-mango-yellow"></i>
+                        <span>০১৭০০-০০০০০০</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-envelope text-mango-yellow"></i>
+                        <span>ranihati.gps@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center pt-8 border-t border-white/5 text-sm opacity-50">
+            <p>&copy; ২০২৪ রাণীহাটি সরকারি প্রাথমিক বিদ্যালয়। ডিজাইন ও ডেভেলপমেন্ট - ডিজিটাল একাডেমি।</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Init AOS
+        AOS.init({ once: true, duration: 800 });
+
+        // Init Swiper
+        var swiper = new Swiper(".teacherSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: { delay: 3000, disableOnInteraction: false },
+            navigation: { nextEl: ".teacher-next", prevEl: ".teacher-prev" },
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 4 },
+                1280: { slidesPerView: 5 }
+            }
+        });
+    </script>
+<script>
+/* ================= NOTICE ================= */
+const noticeURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRmJxBoGOD9lihU-BbZQvvrsORlb2T6evQDQWWznGUmuCq5eeRP8-uc07pNk7kLvdmXYdGJP517WNhp/pub?output=csv";
+
+/* ================= RESULT ================= */
+const resultURL = "PASTE_RESULT_CSV_LINK_HERE";
+
+/* CSV parser (safe) */
+function parseCSV(text) {
+    return text.trim().split("\n").slice(1).map(row => {
+        const firstComma = row.indexOf(",");
+        return [
+            row.slice(0, firstComma).trim(),
+            row.slice(firstComma + 1).trim()
+        ];
+    });
+}
+
+/* Load Notices */
+fetch(noticeURL)
+.then(res => res.text())
+.then(text => {
+    const data = parseCSV(text);
+    const box = document.getElementById("noticeList");
+    box.innerHTML = "";
+
+    data.forEach((item, i) => {
+        box.innerHTML += `
+            <div class="group cursor-pointer">
+                <p class="text-xs font-bold text-orange-600 mb-1">${item[0]}</p>
+                <h4 class="font-bold text-emerald-950 group-hover:text-emerald-600 transition">
+                    ${item[1]}
+                </h4>
+            </div>
+            ${i !== data.length - 1 ? '<div class="h-[1px] bg-slate-100"></div>' : ''}
+        `;
+    });
+});
+
+/* Load Results */
+fetch(resultURL)
+.then(res => res.text())
+.then(text => {
+    const data = parseCSV(text);
+    const box = document.getElementById("resultList");
+    box.innerHTML = "";
+
+    data.forEach(item => {
+        box.innerHTML += `
+            <a href="${item[1]}" target="_blank"
+               class="block bg-white/10 px-4 py-3 rounded-xl hover:bg-mango-yellow hover:text-emerald-900 transition font-semibold">
+               <i class="fas fa-download mr-2"></i>${item[0]}
+            </a>
+        `;
+    });
+});
+</script>
+
+</body>
+</html>
